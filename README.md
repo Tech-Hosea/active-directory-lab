@@ -3,13 +3,12 @@
 Domain Services, DNS, DHCP, Group Policy, and client join in a realistic homelab.
 
 ## 🧱 Topology
-- Proxmox (or Hyper‑V/VMware/VirtualBox)
+- Proxmox
 - 1× Windows Server 2022 (DC01) – AD DS, DNS, DHCP
 - 1–2× Windows 10/11 clients (CLIENT01/CLIENT02)
-- Optional: pfSense router + VLANs
 
 ## ✅ Objectives
-- Stand up AD DS forest: `corp.local`
+- Stand up AD DS forest: `tech-hosea.local`
 - Configure DNS (A/PTR, forwarders), DHCP scopes, reservations
 - Join clients to domain, create OUs and users
 - Create GPOs: password policy, drive mapping, wallpaper, screensaver lockdown
@@ -17,7 +16,7 @@ Domain Services, DNS, DHCP, Group Policy, and client join in a realistic homelab
 
 ## 🚀 Quick Steps
 1. Install Windows Server → set static IP → rename to `DC01`
-2. Add **AD DS** and **DNS** roles → promote to new forest `corp.local`
+2. Add **AD DS** and **DNS** roles → promote to new forest `tech-hosea.local`
 3. Install **DHCP** → create scope (e.g., `192.168.10.100-200`) → authorize
 4. Create OUs: `Corp/Users`, `Corp/Computers`, `Corp/Groups`
 5. Create users and groups; add test users to groups
